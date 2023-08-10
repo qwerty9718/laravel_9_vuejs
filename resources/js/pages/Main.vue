@@ -1,4 +1,5 @@
 <template>
+
     <div class="content-wrapper kanban" style="margin-left: 0">
         <section class="content-header">
             <div class="container-fluid">

@@ -12,7 +12,7 @@ class ColumnController extends Controller
     {
         $columns = Column::all();
         $response = [];
-        $test = [];
+
 
         for ($i = 0; $i < count($columns); $i++) {
             $response[] = $columns[$i];
@@ -23,6 +23,7 @@ class ColumnController extends Controller
             }
         }
 
-        return $response;
+        return $columns;
+
     }
 }

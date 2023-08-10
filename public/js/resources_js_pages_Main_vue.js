@@ -449,7 +449,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.err[data-v-77aa16b6]{\n    color: red;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.err[data-v-77aa16b6]{\r\n    color: red;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -472,7 +472,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.myImg[data-v-e9a53c20]{\n    width: 30%;\n    border: 4px solid #17a2b8;\n    border-radius: 10px;\n}\n.truncate-text[data-v-e9a53c20] {\n    overflow: visible;\n    display: -webkit-box;\n    -webkit-line-clamp: 8;\n    -webkit-box-orient: vertical;\n    line-height: 1.3\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.myImg[data-v-e9a53c20]{\r\n    width: 30%;\r\n    border: 4px solid #17a2b8;\r\n    border-radius: 10px;\n}\n.truncate-text[data-v-e9a53c20] {\r\n    overflow: visible;\r\n    display: -webkit-box;\r\n    -webkit-line-clamp: 8;\r\n    -webkit-box-orient: vertical;\r\n    line-height: 1.3\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
