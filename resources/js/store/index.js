@@ -1,10 +1,12 @@
 import {createStore} from "vuex";
-import {postModule} from "./postModule";
+import {taskModule} from "./taskModule";
+import {columnModule} from "./columnModule";
 
 
 export default createStore({
    modules:{
-       post: postModule
+       task: taskModule,
+       column: columnModule
    }
 });
 

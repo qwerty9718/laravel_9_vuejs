@@ -1,9 +1,5 @@
 <template>
 
-   <h2>    Like {{getLike}}     </h2>
-    <button @click="addLike"> + </button>
-    <button @click="addDislike"> - </button>
-
 <router-view></router-view>
 </template>
 
@@ -14,8 +10,8 @@ export default {
 
     methods:{
         ...mapActions({
-            addLike: 'post/addLike',
-            addDislike: 'post/addDisLike'
+            addLike: 'task/addLike',
+            addDislike: 'task/addDisLike'
         }),
         ...mapMutations({
 
@@ -24,11 +20,11 @@ export default {
 
     computed:{
         ...mapState({
-            like: state => state.post.like
+            like: state => state.task.like
         }),
 
         ...mapGetters({
-            getLike: 'post/getLike'
+            getLike: 'task/getLike'
         })
     }
 }
