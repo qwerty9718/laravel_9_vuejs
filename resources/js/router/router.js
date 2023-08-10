@@ -8,6 +8,11 @@ const routes = [
         name:'main'
     },
 
+    {
+        path:'/img',
+        component: () => import('../pages/DropZone'),
+        name:'dropzone'
+    },
 
 
     // {

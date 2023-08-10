@@ -20,7 +20,7 @@
             <div class="container-fluid h-100">
                 <Column v-for="column in getColumns" :key="column.id" :column="column" :class="column.style">
                     <template v-if="column.title === 'Список задач'" v-slot:button>
-                        <button class="btn btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-plus" style="color: #ffffff;"></i></button>
+                        <button class="btn btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-plus" style="color: #ffffff;"></i>Добавить</button>
                     </template>
                     <template  v-for="task in column.tasks" :key="task.id"><Task :task="task"/></template>
                 </Column>

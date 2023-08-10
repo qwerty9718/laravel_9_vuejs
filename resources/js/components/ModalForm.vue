@@ -20,6 +20,9 @@
                             <label class="form-label">Описание</label>
                             <textarea cols="30" rows="7" class="form-control" type="text" v-model="getTask.text"></textarea>
                         </div>
+
+
+                        <div ref="dropzone" class="p-5 bg-dark text-center text-light">Upload</div>
                     </form>
 
                 </div>
@@ -33,13 +36,17 @@
 </template>
 
 <script>
-import {mapActions, mapGetters} from "vuex";
+import {mapActions, mapGetters,mapMutations} from "vuex";
+import Dropzone from "dropzone";
 export default {
     name: "ModalForm",
 
     methods:{
         ...mapActions({
-            createTask:'task/createTask'
+            createTask:'task/createTask',
+        }),
+        ...mapMutations({
+            setDropzone:'task/setDropzone'
         })
     },
 
@@ -51,6 +58,16 @@ export default {
     },
 
     mounted() {
+        this.setDropzone(new Dropzone(this.$refs.dropzone,{
+            url:'123',
+            autoProcessQueue:false,
+            addRemoveLinks:true,
+            maxFiles:1,
+            maxfilesexceeded: function(file) {
+                this.removeAllFiles();
+                this.addFile(file);
+            }
+        }))
 
     }
 }
