@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\VueController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::group(['prefix' => '/'], function (){
+    Route::get('/',[VueController::class,'index']);
+    Route::get('/{page}',[VueController::class,'index'])->where('page','.*');
 });
