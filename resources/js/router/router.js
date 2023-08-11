@@ -8,11 +8,19 @@ const routes = [
         name:'main'
     },
 
-    // {
-    //     path:'/img',
-    //     component: () => import('../pages/DropZone'),
-    //     name:'dropzone'
-    // },
+
+
+    {
+        path:'/:id',
+        component: () => import('../pages/Card'),
+        name:'card'
+    },
+
+    {
+        path:'/test',
+        component: () => import('../pages/Test'),
+        name:'test'
+    },
 
 
     // {

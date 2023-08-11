@@ -14,7 +14,6 @@ class TaskController extends Controller
 {
 
     public function updateTask($id,TaskRequest $request){
-
         $task = Task::findOrFail($id);
 
         $data = $request->validated();
