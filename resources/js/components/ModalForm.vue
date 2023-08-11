@@ -22,7 +22,7 @@
                         </div>
 
 
-                        <div ref="dropzone" class="p-5 bg-dark text-center text-light">Upload</div>
+                        <div ref="dropzone" class="p-5 bg-dark text-center text-light">Установить картинку</div>
                     </form>
 
                 </div>
@@ -73,8 +73,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .err{
     color: red;
+}
+
+.dz-success-mark,
+.dz-error-mark{
+    display: none;
 }
 </style>

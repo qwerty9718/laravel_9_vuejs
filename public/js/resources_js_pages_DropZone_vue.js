@@ -11,7 +11,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var dropzone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dropzone */ "./node_modules/dropzone/dist/dropzone.mjs");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'dropzone'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -66,7 +66,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   mounted: function mounted() {
-    this.dropzone1 = new dropzone__WEBPACK_IMPORTED_MODULE_0__["default"](this.$refs.dropzone1, {
+    this.dropzone1 = new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'dropzone'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(this.$refs.dropzone1, {
       url: '123',
       autoProcessQueue: false,
       addRemoveLinks: true
@@ -142,13 +142,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _DropZone_vue_vue_type_template_id_28faa778__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DropZone.vue?vue&type=template&id=28faa778 */ "./resources/js/pages/DropZone.vue?vue&type=template&id=28faa778");
 /* harmony import */ var _DropZone_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DropZone.vue?vue&type=script&lang=js */ "./resources/js/pages/DropZone.vue?vue&type=script&lang=js");
-/* harmony import */ var C_OSPanel_domains_Vue_Img_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_OSPanel_domains_laravel_9_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_OSPanel_domains_Vue_Img_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_DropZone_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_DropZone_vue_vue_type_template_id_28faa778__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/pages/DropZone.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_OSPanel_domains_laravel_9_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_DropZone_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_DropZone_vue_vue_type_template_id_28faa778__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/pages/DropZone.vue"]])
 /* hot reload */
 if (false) {}
 
