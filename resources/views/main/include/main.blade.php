@@ -14,7 +14,7 @@
     <!-- Ekko Lightbox -->
     <link rel="stylesheet" href="{{asset('html_css/plugins/ekko-lightbox/ekko-lightbox.css')}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset('html_css/dist/css/adminlte.min.css')}}">
+    <link rel="stylesheet" href="{{asset('html_css/dist/css/adminlte2.min.css')}}">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{asset('html_css/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
 

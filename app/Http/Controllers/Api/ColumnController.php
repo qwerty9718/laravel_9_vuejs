@@ -12,15 +12,18 @@ class ColumnController extends Controller
     {
         $columns = Column::all();
         $response = [];
-        $test = [];
+
 
         for ($i = 0; $i < count($columns); $i++) {
             $response[] = $columns[$i];
             for ($j = 0; $j < count($response); $j++) {
-                foreach ($response[$j]->tasks as $item){}
+                foreach ($response[$j]->tasks as $item){
+                    $item->images;
+                }
             }
         }
 
-        return $response;
+        return $columns;
+
     }
 }

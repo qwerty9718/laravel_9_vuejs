@@ -3,11 +3,15 @@ import axios from "axios";
 export const columnModule = {
     state: () => ({
         url:'http://127.0.0.1:8000/api/',
-        columns: []
+        columns: [],
+        showTable: false
     }),
     getters: {
         getColumns(state){
             return state.columns;
+        },
+        getShowTable(state){
+            return state.showTable
         }
     },
     mutations: {

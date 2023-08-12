@@ -10,12 +10,25 @@ const routes = [
 
 
 
-    // {
-    //
-    //     path: '/:catchAll(.*)',
-    //     component: () => import('../components/Page404'),
-    //     name:'error'
-    // },
+    {
+        path:'/:id',
+        component: () => import('../pages/Card'),
+        name:'card'
+    },
+
+    {
+        path:'/test',
+        component: () => import('../pages/Test'),
+        name:'test'
+    },
+
+
+    {
+
+        path: '/:pathMatch(.*)*',
+        component: () => import('../pages/Page404'),
+        name:'error'
+    },
 
 ]
 const router = createRouter({

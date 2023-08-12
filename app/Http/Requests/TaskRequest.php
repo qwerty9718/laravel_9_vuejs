@@ -26,7 +26,8 @@ class TaskRequest extends FormRequest
         return [
             'title' => 'required|string',
             'text' => '',
-            'column_id' => ''
+            'column_id' => '',
+            'images' => 'nullable|array'
         ];
     }
 
