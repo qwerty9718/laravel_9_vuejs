@@ -8,19 +8,27 @@ const routes = [
         name:'main'
     },
 
+
+
     {
-        path:'/img',
-        component: () => import('../pages/DropZone'),
-        name:'dropzone'
+        path:'/:id',
+        component: () => import('../pages/Card'),
+        name:'card'
+    },
+
+    {
+        path:'/test',
+        component: () => import('../pages/Test'),
+        name:'test'
     },
 
 
-    // {
-    //
-    //     path: '/:catchAll(.*)',
-    //     component: () => import('../components/Page404'),
-    //     name:'error'
-    // },
+    {
+
+        path: '/:pathMatch(.*)*',
+        component: () => import('../pages/Page404'),
+        name:'error'
+    },
 
 ]
 const router = createRouter({

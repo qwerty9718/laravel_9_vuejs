@@ -1,10 +1,11 @@
 <template>
-    <div class="card card-light card-outline">
+    <div :class="'card '+style">
         <div class="card-header"><h5 class="card-title">{{task.title}}</h5>
             <div class="card-tools">
-                <a href="#" class="btn btn-tool">#{{task.id}}</a>
-                <a href="#" class="btn btn-tool"><i class="fas fa-pen"></i></a>
-                <a href="#" class="btn btn-tool" @click.prevent="deleteTask(task.id)"><i class="fas fa-trash-alt"></i></a>
+                <router-link v-if="showActions" class="btn btn-tool" :to="{name:'card',params:{id:task.id}}">#{{task.id}}</router-link>
+                <a href="#" v-if="showActions" class="btn btn-tool" @click.prevent="updateStatus({id:task.id,column_id:task.column_id})"><i class="fas fa-hand-pointer"></i></a>
+                <a href="#" v-if="showActions" class="btn btn-tool" @click.prevent="getUpdateTask(task.id)" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-pen"></i></a>
+                <a href="#" v-if="showActions" class="btn btn-tool"  @click.prevent="deleteTask(task.id)"><i class="fas fa-trash-alt"></i></a>
             </div>
         </div>
 
@@ -14,25 +15,37 @@
             </div>
         </div>
         <div class="card-body"><p class="truncate-text">{{task.text}}</p></div>
-
     </div>
+
 </template>
 
 <script>
 import {mapActions, mapGetters} from "vuex";
+import ModalForm from "./ModalForm";
 
 export default {
     name: "Task",
+    components: {ModalForm},
     props:{
-        task:{type:Object}
+        task:{type:Object},
+        style:{type:Object},
+        showActions:{type: Boolean}
     },
 
 
     methods:{
         ...mapActions({
-            deleteTask:'task/deleteTask'
+            deleteTask:'task/deleteTask',
+            updateStatus:'task/updateStatus',
+            getUpdateTask:'task/getUpdateTask'
         })
     },
+
+    computed:{
+        ...mapGetters({
+            getTask: 'task/getTask',
+        })
+    }
 
 }
 </script>

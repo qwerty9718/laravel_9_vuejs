@@ -26,4 +26,8 @@ Route::get('/columns',[ColumnController::class,'index']);
 Route::group(['prefix'=>'task'],function (){
     Route::post('/',[TaskController::class,'create']);
     Route::delete('/{id}',[TaskController::class,'delete']);
+    Route::get('/{id}',[TaskController::class,'getTask']);
+    Route::patch('/{id}',[TaskController::class,'updateTask']);
+    Route::patch('/status/{id}',[TaskController::class,'updateStatus']);
+//    Route::post('/{id}',[TaskController::class,'updateTask']);
 });
