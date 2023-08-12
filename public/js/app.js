@@ -22377,16 +22377,13 @@ var routes = [{
     return __webpack_require__.e(/*! import() */ "resources_js_pages_Test_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../pages/Test */ "./resources/js/pages/Test.vue"));
   },
   name: 'test'
-}
-
-// {
-//
-//     path: '/:catchAll(.*)',
-//     component: () => import('../components/Page404'),
-//     name:'error'
-// },
-];
-
+}, {
+  path: '/:pathMatch(.*)*',
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ "resources_js_pages_Page404_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../pages/Page404 */ "./resources/js/pages/Page404.vue"));
+  },
+  name: 'error'
+}];
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
   routes: routes,
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createWebHistory)(process.env.BASE_URL)
@@ -33078,7 +33075,7 @@ function useRoute() {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_pages_Main_vue":1,"resources_js_pages_Card_vue":1,"resources_js_pages_Test_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_pages_Main_vue":1,"resources_js_pages_Card_vue":1,"resources_js_pages_Test_vue":1,"resources_js_pages_Page404_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
