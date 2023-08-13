@@ -10,7 +10,7 @@
                 <p class="lead">
                     The page you’re looking for doesn’t exist.
                 </p>
-                <a href="index.html" class="btn btn-primary">Go Home</a>
+                <router-link  class="btn btn-primary" :to="{name:'main'}">Go Home</router-link>
             </div>
 
         </div>

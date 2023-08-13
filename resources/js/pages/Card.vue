@@ -1,4 +1,5 @@
 <template>
+
     <div class="container" v-show="getId == getTask.id">
 
         <div class="card" style="width: 45rem; margin: auto; margin-top: 100px">
@@ -11,11 +12,12 @@
                 <router-link class="btn btn-primary" :to="{name:'main'}">вернуться</router-link>
             </div>
         </div>
-
-
     </div>
 
 
+    <div v-if="getPage404 === true">
+        <Page404/>
+    </div>
 
 </template>
 
@@ -23,13 +25,15 @@
 import {mapState,mapMutations,mapGetters,mapActions} from "vuex"
 import Task from "../components/Task";
 import ModalForm from "../components/ModalForm";
+import Page404 from "./Page404";
 export default {
     name: "Card",
-    components: {Task},
+    components: {Page404, Task},
     computed:{
         ...mapGetters({
             getId:'card/getId',
-            getTask:'card/getTask'
+            getTask:'card/getTask',
+            getPage404: 'card/getPage404'
         })
     },
 

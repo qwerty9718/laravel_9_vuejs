@@ -23,6 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/columns',[ColumnController::class,'index']);
 
+
 Route::group(['prefix'=>'task'],function (){
     Route::post('/',[TaskController::class,'create']);
     Route::delete('/{id}',[TaskController::class,'delete']);

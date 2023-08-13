@@ -1,13 +1,14 @@
 <template>
-
+<Navbar/>
 <router-view></router-view>
 </template>
 
 <script>
 import {mapActions, mapState,mapMutations,mapGetters} from 'vuex';
+import Navbar from "./components/Navbar";
 export default {
     name: "Index",
-
+    components: {Navbar},
     methods:{
         ...mapActions({
             addLike: 'task/addLike',
