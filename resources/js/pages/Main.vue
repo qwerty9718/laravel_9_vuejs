@@ -70,4 +70,21 @@ export default {
 .content-wrapper.kanban {
     height: 100vh
 }
+
+
+
+.content-wrapper.kanban .card.card-row {
+    width: 450px;
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+@media only screen and (max-width: 450px) {
+    .content-wrapper.kanban .card.card-row {
+        width: 300px;
+        display: inline-block;
+        margin: 0 0.5rem;
+    }
+}
+
 </style>

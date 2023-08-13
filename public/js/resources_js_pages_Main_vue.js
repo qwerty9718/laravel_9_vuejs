@@ -575,7 +575,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.block_1[data-v-7ad1a77c],\n.block_2[data-v-7ad1a77c]{\n    position\t: relative;\n    width\t\t: 100%; /* for IE 6 */\n}\n.content-wrapper.kanban[data-v-7ad1a77c] {\n    height: 100vh\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.block_1[data-v-7ad1a77c],\n.block_2[data-v-7ad1a77c]{\n    position\t: relative;\n    width\t\t: 100%; /* for IE 6 */\n}\n.content-wrapper.kanban[data-v-7ad1a77c] {\n    height: 100vh\n}\n.content-wrapper.kanban .card.card-row[data-v-7ad1a77c] {\n    width: 450px;\n    display: inline-block;\n    margin: 0 0.5rem;\n}\n@media only screen and (max-width: 450px) {\n.content-wrapper.kanban .card.card-row[data-v-7ad1a77c] {\n        width: 300px;\n        display: inline-block;\n        margin: 0 0.5rem;\n}\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
