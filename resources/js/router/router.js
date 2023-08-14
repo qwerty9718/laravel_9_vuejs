@@ -1,26 +1,28 @@
 import {createRouter, createWebHistory} from "vue-router";
+import {cardModule} from "../store/cardModule";
 
 const routes = [
 
+
     {
-        path:'/',
+        path:'/kanban-board',
         component: () => import('../pages/Main'),
         name:'main'
     },
 
-
-
     {
         path:'/:id',
         component: () => import('../pages/Card'),
-        name:'card'
+        name:'card',
+
     },
 
     {
-        path:'/test',
-        component: () => import('../pages/Test'),
-        name:'test'
+        path:'/',
+        component: () => import('../pages/Start-page'),
+        name:'start-page'
     },
+
 
 
     {

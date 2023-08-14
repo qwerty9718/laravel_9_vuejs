@@ -1,19 +1,15 @@
 <template>
 
-
-    <div class="content-wrapper kanban" style="margin-left: 0">
+    <div class="content-wrapper kanban" style="margin-left: 0" id="block_1">
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-6">
-                        <h1>Kanban Board  </h1>
-                    </div>
                 </div>
             </div>
         </section>
 
 
-        <section class="my_content pb-3">
+        <section class="my_content pb-3" id="block_2">
             <div class="container-fluid h-100">
                 <Column v-for="column in getColumns" :key="column.id" :column="column" :class="column.style">
                     <template v-if="column.id === 1" v-slot:button>
@@ -65,9 +61,30 @@ export default {
 
 <style scoped>
 
-
+.block_1,
+.block_2{
+    position	: relative;
+    width		: 100%; /* for IE 6 */
+}
 
 .content-wrapper.kanban {
     height: 100vh
 }
+
+
+
+.content-wrapper.kanban .card.card-row {
+    width: 450px;
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+@media only screen and (max-width: 450px) {
+    .content-wrapper.kanban .card.card-row {
+        width: 300px;
+        display: inline-block;
+        margin: 0 0.5rem;
+    }
+}
+
 </style>

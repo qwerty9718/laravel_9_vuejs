@@ -5,6 +5,7 @@ export const cardModule = {
         url:'http://127.0.0.1:8000/api/',
         id:null,
         task:{title: '', text:'',id:null, column_id:null ,images:[]},
+        page404:null
 
     }),
     getters: {
@@ -15,6 +16,9 @@ export const cardModule = {
         getTask(state){
             return state.task;
         },
+        getPage404(state){
+            return state.page404;
+        }
     },
     mutations: {
         setId(state, id){
@@ -32,8 +36,14 @@ export const cardModule = {
     },
     actions: {
         async getTaskById({state, commit,dispatch},id){
-            const data = await axios.get(state.url+'task/'+id);
-            commit('setTask',{title:data.data.title,text:data.data.text, id:data.data.id, column_id:data.data.column_id, images:data.data.images});
+            try {
+                state.page404 = null;
+                const data = await axios.get(state.url+'task/'+id);
+                commit('setTask',{title:data.data.title,text:data.data.text, id:data.data.id, column_id:data.data.column_id, images:data.data.images});
+            }catch (e){
+                state.page404 = true;
+            }
+
         },
     },
     namespaced: true
