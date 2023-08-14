@@ -10,7 +10,7 @@
         </div>
 
         <div class="mt-2 mb-2" v-if="task.images">
-            <div v-for="image in task.images" :key="image.id" class="text-lg-start ml-2">
+            <div v-for="image in task.images" :key="image.id" class="text-center">
                 <img :src="image.url" alt="" class="myImg">
             </div>
         </div>
@@ -52,9 +52,11 @@ export default {
 
 <style scoped>
 .myImg{
-    width: 30%;
+    width: 55%;
+    height: 15rem;
     border: 4px solid #17a2b8;
     border-radius: 10px;
+    margin:auto;
 }
 
 .truncate-text {
