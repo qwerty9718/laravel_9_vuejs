@@ -10,7 +10,8 @@ use App\Models\Post;
 class PostController extends BaseController
 {
     public function getAllPosts(){
-        $posts = Post::orderBy('id', 'desc')->get();
+//        $posts = Post::orderBy('id', 'desc')->get();
+        $posts = Post::orderBy('id', 'desc')->paginate(10);
         foreach ($posts as $post){$post->images;}
         return $posts;
     }
