@@ -1,4 +1,5 @@
 import axios from "axios";
+import {computed} from "vue";
 const defaultPost = {title: '', text:'',id:null,images:[]}
 export const dropzone_Module = {
     state: () => ({
@@ -72,6 +73,7 @@ export const dropzone_Module = {
                     files.forEach(file => {
                         state.dropzone.removeFile(file);
                     })
+                    dispatch('postList/minusPage', {}, {root:true})
                     dispatch('postList/findAllPosts', {}, {root:true})
                 }
 
