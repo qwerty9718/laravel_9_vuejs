@@ -14,6 +14,13 @@
                     <li class="nav-item">
                         <router-link :to="{name:'main'}" class="nav-link active">Таблица задач</router-link>
                     </li>
+
+
+                    <li class="nav-item">
+                        <router-link :to="{name:'all-posts'}" class="nav-link active">Список постов</router-link>
+                    </li>
+
+
                 </ul>
 
                 <form class="d-flex" role="search" v-if="$route.name === 'main'">

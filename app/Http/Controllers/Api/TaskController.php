@@ -10,83 +10,26 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class TaskController extends Controller
+
+class TaskController extends SecondBaseController
 {
 
     public function updateTask($id,TaskRequest $request){
         $task = Task::findOrFail($id);
-
         $data = $request->validated();
-        if (isset($data['images']) ){
-            $images = $data['images'];
-            unset($data['images']);
-        }
-
-
-        if(isset($images)){
-
-
-            if (isset($task->images)){
-                foreach ($task->images as $image){
-                    Storage::disk('public')->delete($image->path);
-                    $image->delete($image);
-                }
-            }
-
-            foreach ($images as $image){
-                $name = md5(Carbon::now() . '_' . $image->getClientOriginalName()) . '.' . $image->getClientOriginalExtension();
-                $filePath = Storage::disk('public')->putFileAs('/images',$image,$name);
-                Image::create([
-                    'path' => $filePath,
-                    'url' => url('/storage/'.$filePath),
-                    'task_id' => $task->id
-                ]);
-            }
-        }
-
-        $task->update($data);
-
-
+        $this->service->updateTask($data,$task);
         return 'Задача обновлена';
 
     }
 
     public function create(TaskRequest $request){
-
-
         $data = $request->validated();
-        if (isset($data['images']) ){
-            $images = $data['images'];
-            unset($data['images']);
-        }
-
-        $task = Task::create($data);
-
-        if(isset($images)){
-            foreach ($images as $image){
-                $name = md5(Carbon::now() . '_' . $image->getClientOriginalName()) . '.' . $image->getClientOriginalExtension();
-                $filePath = Storage::disk('public')->putFileAs('/images',$image,$name);
-                Image::create([
-                    'path' => $filePath,
-                    'url' => url('/storage/'.$filePath),
-                    'task_id' => $task->id
-                ]);
-            }
-        }
-
+        $this->service->create($data);
         return 'Задача создана';
     }
 
     public function delete($id){
-        $task = Task::findOrFail($id);
-        if (isset($task->images)){
-            foreach ($task->images as $image){
-                Storage::disk('public')->delete($image->path);
-                $image->delete($image);
-            }
-        }
-
-        $task->delete($id);
+       $this->service->delete($id);
     }
 
 
