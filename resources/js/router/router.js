@@ -1,26 +1,39 @@
 import {createRouter, createWebHistory} from "vue-router";
-import {cardModule} from "../store/cardModule";
+import {cardModule} from "../store/Task/cardModule";
 
 const routes = [
-
+    {
+        path:'/',
+        component: () => import('../pages/Start-page'),
+        name:'start-page'
+    },
 
     {
         path:'/kanban-board',
-        component: () => import('../pages/Main'),
+        component: () => import('../pages/Task/Main'),
         name:'main'
     },
 
     {
         path:'/:id',
-        component: () => import('../pages/Card'),
+        component: () => import('../pages/Task/Card'),
         name:'card',
 
     },
 
+
+
     {
-        path:'/',
-        component: () => import('../pages/Start-page'),
-        name:'start-page'
+        path:'/posts',
+        component: () => import('../pages/Post/Posts'),
+        name:'all-posts'
+    },
+
+
+    {
+        path:'/posts/:id',
+        component: () => import('../pages/Post/SinglePost'),
+        name:'single-post'
     },
 
 

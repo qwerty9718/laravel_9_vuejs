@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\ColumnController;
+use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\TaskController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -31,4 +32,9 @@ Route::group(['prefix'=>'task'],function (){
     Route::patch('/{id}',[TaskController::class,'updateTask']);
     Route::patch('/status/{id}',[TaskController::class,'updateStatus']);
 //    Route::post('/{id}',[TaskController::class,'updateTask']);
+});
+
+Route::group(['prefix'=>'post'],function (){
+    Route::get('/all',[PostController::class,'getAllPosts']);
+    Route::get('/{id}',[PostController::class,'findPostById']);
 });

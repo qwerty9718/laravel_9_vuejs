@@ -1,8 +1,10 @@
 import {createStore} from "vuex";
-import {taskModule} from "./taskModule";
-import {columnModule} from "./columnModule";
-import {cardModule} from "./cardModule";
-import {navbarModule} from "./navbarModule";
+import {taskModule} from "./Task/taskModule";
+import {columnModule} from "./Task/columnModule";
+import {cardModule} from "./Task/cardModule";
+import {navbarModule} from "./Task/navbarModule";
+import {post_ListModule} from "./Post/post_ListModule";
+import {post_Module} from "./Post/post_Module";
 
 
 export default createStore({
@@ -10,7 +12,9 @@ export default createStore({
        task: taskModule,
        column: columnModule,
        card: cardModule,
-       navbarModule: navbarModule
+       navbarModule: navbarModule,
+       postList: post_ListModule,
+       post: post_Module
    }
 });
 
