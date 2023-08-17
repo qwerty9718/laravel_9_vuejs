@@ -33,7 +33,7 @@
 <script>
 import {mapState,mapMutations,mapGetters,mapActions} from "vuex"
 
-import Page404 from "./Page404";
+import Page404 from "../Page404";
 export default {
     name: "Card",
     components: {Page404},

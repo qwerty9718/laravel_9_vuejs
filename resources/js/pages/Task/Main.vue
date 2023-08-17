@@ -31,9 +31,9 @@
 
 <script>
 import {mapGetters,mapActions} from "vuex";
-import Column from "../components/Column";
-import Task from "../components/Task";
-import ModalForm from "../components/ModalForm";
+import Column from "../../components/Task/Column";
+import Task from "../../components/Task/Task";
+import ModalForm from "../../components/Task/ModalForm";
 
 export default {
     name: "Main",
