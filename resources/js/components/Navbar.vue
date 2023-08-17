@@ -20,6 +20,7 @@
                         <router-link :to="{name:'all-posts'}" class="nav-link active">Список постов</router-link>
                     </li>
 
+
                 </ul>
 
                 <form class="d-flex" role="search" v-if="$route.name === 'main'">

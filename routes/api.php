@@ -37,4 +37,7 @@ Route::group(['prefix'=>'task'],function (){
 Route::group(['prefix'=>'post'],function (){
     Route::get('/all',[PostController::class,'getAllPosts']);
     Route::get('/{id}',[PostController::class,'findPostById']);
+    Route::post('/',[PostController::class,'createPost']);
+    Route::delete('/{id}',[PostController::class,'delete']);
+    Route::patch('/{id}',[PostController::class,'updatePost']);
 });

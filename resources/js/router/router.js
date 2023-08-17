@@ -29,13 +29,18 @@ const routes = [
         name:'all-posts'
     },
 
+    {
+        path:'/posts/create',
+        component: () => import('../pages/Post/Create'),
+        name:'create-post'
+    },
+
 
     {
         path:'/posts/:id',
         component: () => import('../pages/Post/SinglePost'),
         name:'single-post'
     },
-
 
 
     {

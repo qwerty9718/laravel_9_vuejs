@@ -2,18 +2,16 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
-use App\Models\Post;
-use Illuminate\Http\Request;
 
-class PostController extends Controller
+use App\Http\Requests\PostRequest;
+use App\Models\Post;
+
+
+class PostController extends BaseController
 {
     public function getAllPosts(){
-        $posts = Post::all();
-        foreach ($posts as $post){
-            $post->images;
-        }
-
+        $posts = Post::orderBy('id', 'desc')->get();
+        foreach ($posts as $post){$post->images;}
         return $posts;
     }
 
@@ -21,5 +19,23 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         $post->images;
         return $post;
+    }
+
+
+    public function createPost(PostRequest $request){
+        $data = $request->validated();
+        $this->service->createPost($data);
+        return 'Пост создан';
+    }
+
+    public function delete($id){
+        $this->service->delete($id);
+    }
+
+    public function updatePost($id,PostRequest $request){
+        $post = Post::findOrFail($id);
+        $data = $request->validated();
+        $this->service->updatePost($data,$post);
+        return 'Пост обновлен';
     }
 }
