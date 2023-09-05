@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const cardModule = {
     state: () => ({
-        url:'http://127.0.0.1:8000/api/',
+        url:'http://95.130.227.47:81/api/',
         id:null,
         task:{title: '', text:'',id:null, column_id:null ,images:[]},
         page404:null
