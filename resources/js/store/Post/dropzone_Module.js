@@ -3,7 +3,7 @@ import {computed} from "vue";
 const defaultPost = {title: '', text:'',id:null,images:[]}
 export const dropzone_Module = {
     state: () => ({
-        url:'http://127.0.0.1:8000/api/',
+        url:'http://95.130.227.47:81/api/',
         dropzone: null,
         post:{title: '', text:'',id:null,images:[]},
         error: {title:null},
