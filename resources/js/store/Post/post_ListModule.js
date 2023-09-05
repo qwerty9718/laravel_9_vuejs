@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const post_ListModule = {
     state: () => ({
-        url:'http://127.0.0.1:8000/api/',
+        url:'http://95.130.227.47:81/api/',
         posts:[],
         page: 1,
         totalPages:null,
